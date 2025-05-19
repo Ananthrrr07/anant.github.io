@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(to bottom right, #ffe0f0, #ffe9fa);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: #fff0f7;
+  border: 2px dashed #ffb6c1;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 20px #ffc0cb;
+  position: relative;
+  z-index: 2;
+}
+
+h1, h3 {
+  color: #d63384;
+}
+
+form input, form textarea, form select, form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ff85c1;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+form button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #ff85c1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Floating hearts animation */
+.hearts::before, .hearts::after {
+  content: "💖 💘 💗 💞 💓 💕";
+  position: absolute;
+  font-size: 24px;
+  animation: floatHearts 10s linear infinite;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  opacity: 0.4;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
